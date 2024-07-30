@@ -6,11 +6,13 @@ const employees = [];
 const collectEmployees = function() {
     let numberOfEmployees = parseInt(prompt("How many individuals do you want to add as an employee?"));
     for (let i = 0; i < numberOfEmployees; i++) {
-          let name = prompt("Please enter your name:");
+          let firstName = prompt("Please enter your first name:");
+          let lastName = prompt("Please enter your last  name:");
           let salary = prompt("Please enter your annual salary:");
         
           let employee = {
-            name: name,
+            firstName: firstName,
+            lastName: lastName,
             salary: parseInt(salary)
           };
 
@@ -25,6 +27,8 @@ addEmployeesBtn.addEventListener('click', function()
 console.log(employeeData);}
 );
 // this code allows for the prompt to come up and for the user to enter the data necessary for the employee salary tracler to populate their data into an array.
+
+
 // Display the average salary
 const displayAverageSalary = function(employeesArray) {
   // TODO: Calculate and display the average salary
